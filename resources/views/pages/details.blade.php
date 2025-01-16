@@ -85,16 +85,12 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
-                        <th class="text-center whitespace-nowrap">Structures</th>
-                        <th class="text-center whitespace-nowrap">Déployées</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
-                        <th class="text-center whitespace-nowrap">Année d'exploitation</th>
-                        <th class="text-center whitespace-nowrap">Année de déploiement</th>
+                       
+                        <th class="text-center whitespace-nowrap">Nom</th>
                         <th class="text-center whitespace-nowrap">Description</th>
+                        <th class="text-center whitespace-nowrap">date de debut</th>
+                        <th class="text-center whitespace-nowrap">date de fin</th>
+                        <th class="text-center whitespace-nowrap">Status</th>
                         <th class="text-center whitespace-nowrap">ACTIONS</th>
                     </tr>
                 </thead>
@@ -104,22 +100,17 @@
                             <td class="w-10">
                                 
                             </td>
-                            <td class="!py-3.5">
+                            <td  class="text-center capitalize">
                                 
                             </td>
                             <td class="text-center">
                                 
                             </td>
-                            <td class="text-center capitalize"></td>
+                            
                             <td class="w-40">
                             
                             </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
+                            
                             <td class="text-center"></td>
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
@@ -227,43 +218,22 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
-                        <th class="text-center whitespace-nowrap">Structures</th>
-                        <th class="text-center whitespace-nowrap">Déployées</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
-                        <th class="text-center whitespace-nowrap">Année d'exploitation</th>
-                        <th class="text-center whitespace-nowrap">Année de déploiement</th>
+                       
+                        <th class="text-center whitespace-nowrap">Nom</th>
                         <th class="text-center whitespace-nowrap">Description</th>
+                        <th class="text-center whitespace-nowrap">Role</th>
+                        <th class="text-center whitespace-nowrap">version</th>
                         <th class="text-center whitespace-nowrap">ACTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
-                            <td class="!py-3.5">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            <td class="text-center capitalize"></td>
-                            <td class="w-40">
-                            
-                            </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
+                            <td class="w-10"></td>
                             <td class="text-center"></td>
-                            <td class="table-report__action w-56">
+                            <td class="text-center "></td>
+                            <td class="w-40"></td>
+                           <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
                                     <a class="flex items-center mr-3" href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
@@ -369,25 +339,21 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
-                        <th class="text-center whitespace-nowrap">Structures</th>
-                        <th class="text-center whitespace-nowrap">Déployées</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
-                        <th class="text-center whitespace-nowrap">Année d'exploitation</th>
-                        <th class="text-center whitespace-nowrap">Année de déploiement</th>
-                        <th class="text-center whitespace-nowrap">Description</th>
+                        
+                        <th class="whitespace-nowrap">Nom</th>
+                        <th class="text-center whitespace-nowrap">Statut</th>
+                        <th class="text-center whitespace-nowrap">Role</th>
+                        <th class="text-center whitespace-nowrap">Equipe</th>
+                        <th class="text-center whitespace-nowrap">Actif</th>
+                        <th class="text-center whitespace-nowrap">Date de début</th>
+                        <th class="text-center whitespace-nowrap">date de fin</th>
                         <th class="text-center whitespace-nowrap">ACTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
+                            
                             <td class="!py-3.5">
                                 
                             </td>
@@ -651,16 +617,11 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
-                        <th class="text-center whitespace-nowrap">Structures</th>
-                        <th class="text-center whitespace-nowrap">Déployées</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
-                        <th class="text-center whitespace-nowrap">Année d'exploitation</th>
-                        <th class="text-center whitespace-nowrap">Année de déploiement</th>
+                        
+                        <th class="whitespace-nowrap">id</th>
                         <th class="text-center whitespace-nowrap">Description</th>
+                        <th class="text-center whitespace-nowrap">STATUS</th>
+                        <th class="text-center whitespace-nowrap">Date</th>
                         <th class="text-center whitespace-nowrap">ACTIONS</th>
                     </tr>
                 </thead>
@@ -670,23 +631,13 @@
                             <td class="w-10">
                                 
                             </td>
-                            <td class="!py-3.5">
+                            <td  class="text-center capitalize">
                                 
                             </td>
                             <td class="text-center">
                                 
                             </td>
-                            <td class="text-center capitalize"></td>
-                            <td class="w-40">
-                            
-                            </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
-                            <td class="text-center"></td>
+                            <td class="!py-3.5" ></td>
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
                                     <a class="flex items-center mr-3" href="javascript:;">
@@ -794,42 +745,23 @@
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
-                        <th class="text-center whitespace-nowrap">Structures</th>
-                        <th class="text-center whitespace-nowrap">Déployées</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
-                        <th class="text-center whitespace-nowrap">Année d'exploitation</th>
-                        <th class="text-center whitespace-nowrap">Année de déploiement</th>
+                        
+                        <th class="whitespace-nowrap">id</th>
                         <th class="text-center whitespace-nowrap">Description</th>
+                        <th class="text-center whitespace-nowrap">Date</th>
                         <th class="text-center whitespace-nowrap">ACTIONS</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
-                            <td class="!py-3.5">
+                            <td  class="text-center capitalize">
                                 
                             </td>
                             <td class="text-center">
                                 
                             </td>
-                            <td class="text-center capitalize"></td>
-                            <td class="w-40">
-                            
-                            </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
-                            <td class="text-center"></td>
+                            <td class="!py-3.5" ></td>
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
                                     <a class="flex items-center mr-3" href="javascript:;">
