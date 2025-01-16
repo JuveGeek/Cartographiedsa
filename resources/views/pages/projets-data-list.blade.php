@@ -69,8 +69,12 @@
                             <td class="w-40"></td>   
                             
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                <a class="flex items-center text-primary whitespace-nowrap mr-3" href="{{route('details')}}">
+                                        <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> View Details
+                                    </a>
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
                                     <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
