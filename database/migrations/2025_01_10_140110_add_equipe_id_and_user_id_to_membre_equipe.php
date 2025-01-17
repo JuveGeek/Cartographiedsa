@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('membre_equipe', function (Blueprint $table) {
 
 
-            $table->foreignId('personnel_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('equipe_id')->constrained()->onDelete('cascade');
 
         });
@@ -30,8 +30,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('membre_equipe', function (Blueprint $table) {
-            $table->dropForeign(['personnel_id']);
-            $table->dropColumn('personnel_id');
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
 
             $table->dropForeign(['equipe_id']);
             $table->dropColumn('equipe_id');

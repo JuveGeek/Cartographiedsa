@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('point_focal', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
 
-            $table->foreignId('personnel_id')->constrained()->onDelete('cascade');
-            $table->foreignId('structure_porteuse_id')->constrained()->onDelete('cascade');
+            //$table->foreignId('structure_porteuse_id')->constrained()->default(1)->onDelete('cascade');
+            $table->foreignId('structure_porteuse_id')->default(1)->onDelete('cascade');
 
         });
     }
@@ -28,10 +28,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('point_focal', function (Blueprint $table) {
-            $table->dropForeign(['personnel_id']);
-            $table->dropColumn('personnel_id');
-
+        Schema::table('users', function (Blueprint $table) {
             $table->dropForeign(['structure_porteuse_id']);
             $table->dropColumn('structure_porteuse_id');
         });
