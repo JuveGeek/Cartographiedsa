@@ -20,12 +20,9 @@ use App\Http\Controllers\ColorSchemeController;
 Route::get('dark-mode-switcher', [DarkModeController::class, 'switch'])->name('dark-mode-switcher');
 Route::get('color-scheme-switcher/{color_scheme}', [ColorSchemeController::class, 'switch'])->name('color-scheme-switcher');
 
-Route::controller(AuthController::class)->middleware('loggedin')->group(function() {
-    Route::get('login', 'loginView')->name('login.index');
-    Route::post('login', 'login')->name('login.check');
-});
-
-Route::middleware('guest')->group(function() {
+// Routes pour les utilisateurs authentifiés
+Route::middleware('auth')->group(function() {
+    // Pages accessibles uniquement aux utilisateurs authentifiés
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::controller(PageController::class)->group(function() {
         Route::get('/', 'dashboardOverview1')->name('dashboard-overview-1');
@@ -73,8 +70,8 @@ Route::middleware('guest')->group(function() {
         Route::get('faq-layout-1-page', 'faqLayout1')->name('faq-layout-1');
         Route::get('faq-layout-2-page', 'faqLayout2')->name('faq-layout-2');
         Route::get('faq-layout-3-page', 'faqLayout3')->name('faq-layout-3');
-        Route::get('login-page', 'login')->name('login');
-        Route::get('register-page', 'register')->name('register');
+        //Route::get('login-page', 'login')->name('login');
+        //Route::get('register-page', 'register')->name('register');
         Route::get('error-page-page', 'errorPage')->name('error-page');
         Route::get('update-profile-page', 'updateProfile')->name('update-profile');
         Route::get('change-password-page', 'changePassword')->name('change-password');
@@ -106,5 +103,17 @@ Route::middleware('guest')->group(function() {
         Route::get('chart-page', 'chart')->name('chart');
         Route::get('slider-page', 'slider')->name('slider');
         Route::get('image-zoom-page', 'imageZoom')->name('image-zoom');
+    // Ajoute les autres routes ici selon le besoin
     });
+});
+
+// Routes pour les utilisateurs non connectés (invités)
+Route::middleware('guest')->group(function() {
+    // Pages accessibles uniquement aux utilisateurs non connectés
+    Route::get('login', [AuthController::class, 'loginView'])->name('login.index');
+    Route::post('login', [AuthController::class, 'login'])->name('login.check');
+    // Page d'inscription, si nécessaire
+    Route::get('register-page', [PageController::class, 'register'])->name('register');
+    //Route::post('register', [AuthController::class, 'register'])->name('register.store');
+
 });

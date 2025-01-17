@@ -853,7 +853,7 @@ class PageController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     
+
     public function chart()
     {
         return view('pages/chart');
