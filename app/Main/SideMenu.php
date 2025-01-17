@@ -71,7 +71,7 @@ class SideMenu
                         //Data list # Liste des projets
                         'title'      => 'Liste des projets',
                     ],
-                    'projets-fichier'   => [
+                    /*'projets-fichier'   => [
                         'icon'       => 'hard-drive ',
                         'route_name' => 'projets-fichier',
                         'params'     => [
@@ -79,7 +79,7 @@ class SideMenu
                         ],
                         //Form # Fichers
                         'title'      => 'Fichiers',
-                    ],
+                    ],*/
                 ],
             ],
             /*'post' => [

@@ -8,7 +8,7 @@
         </ol>
     </nav>
     <!-- END: Breadcrumb -->
-    <!-- BEGIN: Search -->
+    <!-- BEGIN: Search 
     <div class="intro-x relative mr-3 sm:mr-6">
         <div class="search hidden sm:block">
             <input type="text" class="search__input form-control border-transparent" placeholder="Search...">
@@ -19,16 +19,17 @@
         </a>
         <div class="search-result">
             <div class="search-result__content">
-                
-                
-                
-                
-                
-              
+    
+            
+
+
+
+
+            
             </div>
         </div>
     </div>
-    <!-- END: Search -->
+    END: Search -->
     <!-- BEGIN: Notifications -->
     <div class="intro-x dropdown mr-auto sm:mr-6">
         <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false" data-tw-toggle="dropdown">

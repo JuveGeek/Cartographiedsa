@@ -1,129 +1,64 @@
 @extends('../layout/' . $layout)
 
 @section('subhead')
-    <title>détails - Midone - Tailwind HTML Admin Template</title>
+    <title>Détiails Data List - Midone - Tailwind HTML Admin Template</title>
 @endsection
 
 @section('subcontent')
-    <h2 class="intro-y text-lg font-medium mt-10">Détails sur le projet</h2>
-
-    <div class="intro-y grid grid-cols-12 gap-6 mt-5">
-        <div class="col-span-12 lg:col-span-6">
-            <!-- BEGIN: Basic Datepicker -->
-            <div class="intro-y box mt-5">
-                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                    <h2 class="font-medium text-base mr-auto">Les fonctionnalités</h2>
-                </div>
-                <div id="input-group-datepicker" class="p-5">
-                    
-                    <div class="preview">
-                    <label class="form-check-label ml-0" for="show-example-2">Show </label>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Basic Datepicker -->
-            <!-- BEGIN: Input Group -->
-            <div class="intro-y box mt-5">
-                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                    <h2 class="font-medium text-base mr-auto">Les technologies</h2>
-                </div>
-                <div id="input-group-datepicker" class="p-5">
-                    
-                    <div class="preview">
-                    <label class="form-check-label ml-0" for="show-example-2">Show </label>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Input Group -->
-        </div>
-        <div class="col-span-12 lg:col-span-6">
-            <!-- BEGIN: Daterange Picker -->
-            <div class="intro-y box mt-5">
-                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                    <h2 class="font-medium text-base mr-auto">Les membres du projets</h2>
-                </div>
-                <div id="input-group-datepicker" class="p-5">
-                    
-                    <div class="preview">
-                    <label class="form-check-label ml-0" for="show-example-2">Show </label>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Daterange Picker -->
-            <!-- BEGIN: Modal Datepicker -->
-            <div class="intro-y box mt-5">
-                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                    <h2 class="font-medium text-base mr-auto">La struture porteuse</h2>
-                </div>
-                <div id="input-group-datepicker" class="p-5">
-                    
-                    <div class="preview">
-                    <label class="form-check-label ml-0" for="show-example-2">Show </label>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Modal Datepicker -->
-        </div>
-    </div>
-    
-  <!-- begin fonctoinaliter -->
-  <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New fonctionnalité</button>
+     <!-- BEGIN: fonctionnalité -->
+    <h2 class="intro-y text-lg font-medium mt-10">Fonctionnalités </h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-fonctionnalite">Ajouter une fonctionnalité</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                       
                         <th class="text-center whitespace-nowrap">Nom</th>
                         <th class="text-center whitespace-nowrap">Description</th>
                         <th class="text-center whitespace-nowrap">date de debut</th>
                         <th class="text-center whitespace-nowrap">date de fin</th>
                         <th class="text-center whitespace-nowrap">Status</th>
-                        <th class="text-center whitespace-nowrap">ACTIONS</th>
+                        <th class="text-center whitespace-nowrap">ACTIONS</th>   
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
-                            <td  class="text-center capitalize">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            
-                            <td class="w-40">
-                            
-                            </td>
-                            
+                            <td class="w-40"></td>
                             <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>   
+                            
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-fonctionnalite">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -178,8 +113,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-fonctionnalite" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">Fonctionnalité</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-fonctionnalite" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -197,54 +161,61 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-  <!--end fonctionnaliter -->
+     <!-- END: fonctionnalité -->
 
-   <!-- begin technologies -->
-   <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New technologie</button>
+      <!-- BEGIN: technologie -->
+    <h2 class="intro-y text-lg font-medium mt-10">Technologies </h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-technologie">Ajouter une technologie</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                       
-                        <th class="text-center whitespace-nowrap">Nom</th>
+                    <th class="text-center whitespace-nowrap">Nom</th>
                         <th class="text-center whitespace-nowrap">Description</th>
                         <th class="text-center whitespace-nowrap">Role</th>
                         <th class="text-center whitespace-nowrap">version</th>
-                        <th class="text-center whitespace-nowrap">ACTIONS</th>
+                        <th class="text-center whitespace-nowrap">ACTIONS</th>  
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10"></td>
-                            <td class="text-center"></td>
-                            <td class="text-center "></td>
                             <td class="w-40"></td>
-                           <td class="table-report__action w-56">
+                            <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                              
+                            
+                            <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-technologie">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -299,8 +270,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-technologie" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">Technologie</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-technologie" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -318,71 +318,65 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-  <!--end technologies -->
-   
-     <!-- begin membre -->
-  <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New membre</button>
+     <!-- END: technologie -->
+
+     <!-- BEGIN: membres -->
+<h2 class="intro-y text-lg font-medium mt-10">Membre </h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-membre">Ajouter un membre</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        
-                        <th class="whitespace-nowrap">Nom</th>
+                    <th class="whitespace-nowrap">Nom</th>
                         <th class="text-center whitespace-nowrap">Statut</th>
                         <th class="text-center whitespace-nowrap">Role</th>
                         <th class="text-center whitespace-nowrap">Equipe</th>
                         <th class="text-center whitespace-nowrap">Actif</th>
                         <th class="text-center whitespace-nowrap">Date de début</th>
                         <th class="text-center whitespace-nowrap">date de fin</th>
-                        <th class="text-center whitespace-nowrap">ACTIONS</th>
+                        <th class="text-center whitespace-nowrap">ACTIONS</th>   
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            
-                            <td class="!py-3.5">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            <td class="text-center capitalize"></td>
-                            <td class="w-40">
-                            
-                            </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
+                            <td class="w-40"></td>
                             <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>   
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-membre">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -437,8 +431,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-membre" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">membres</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-membre" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -456,29 +479,33 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-  <!--end membre-->
+     <!-- END: membres -->
+
+     <!-- BEGIN:  instances -->
+<h2 class="intro-y text-lg font-medium mt-10"> instance </h2>
     <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New instance</button>
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-instance">Ajouter une  instance</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        <th class="whitespace-nowrap">
-                            <input class="form-check-input" type="checkbox">
-                        </th>
-                        <th class="whitespace-nowrap">N°</th>
+                    <th class="whitespace-nowrap">N°</th>
                         <th class="text-center whitespace-nowrap">Structures</th>
                         <th class="text-center whitespace-nowrap">Déployées</th>
                         <th class="text-center whitespace-nowrap">STATUS</th>
@@ -491,38 +518,26 @@
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
-                            <td class="!py-3.5">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            <td class="text-center capitalize"></td>
-                            <td class="w-40">
-                            
-                            </td>
-                            <td class="w-40">
-                                
-                            </td>
-                            <td class="w-40">
-                               
-                            </td>
+                            <td class="w-40"></td>
                             <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>   
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-instance">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -577,8 +592,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-instance" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto"> instances</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-instance" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -596,60 +640,62 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-    <!--end instance-->
+     <!-- END:  instances -->
 
-     <!-- begin amendements-->
-  <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New amendement</button>
+      <!-- BEGIN: amendements-->
+<h2 class="intro-y text-lg font-medium mt-10">Amendements </h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-amendement">Ajouter un amendement</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        
                         <th class="whitespace-nowrap">id</th>
                         <th class="text-center whitespace-nowrap">Description</th>
-                        <th class="text-center whitespace-nowrap">STATUS</th>
+                        <th class="text-center whitespace-nowrap">Status</th>
+                        <th class="text-center whitespace-nowrap">Source</th>
                         <th class="text-center whitespace-nowrap">Date</th>
-                        <th class="text-center whitespace-nowrap">ACTIONS</th>
+                        <th class="text-center whitespace-nowrap">ACTIONS</th> 
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td class="w-10">
-                                
-                            </td>
-                            <td  class="text-center capitalize">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            <td class="!py-3.5" ></td>
+                            <td class="w-40"></td>
+                            <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>   
+                            
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-amendement">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -704,8 +750,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-amendement" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">amendements</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-amendement" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -723,57 +798,62 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-  <!--end amendements -->
+     <!-- END: amendements-->
 
-  
-     <!-- begin difficultes-->
-     <div class="grid grid-cols-12 gap-6 mt-5">
-        <div class="intro-y col-span-12 flex flex-wrap xl:flex-nowrap items-center mt-2">
-            <button class="btn btn-primary shadow-md mr-2">Add New difficulté</button>
+    <!-- BEGIN: Difficultes-->
+<h2 class="intro-y text-lg font-medium mt-10">Difficultés </h2>
+    <div class="grid grid-cols-12 gap-6 mt-5">
+        <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             
-            <div class="hidden xl:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
-            <div class="w-full xl:w-auto flex items-center mt-3 xl:mt-0">
+            <button class="btn btn-primary shadow-md mr-2" data-tw-toggle="modal" data-tw-target="#new-order-modal-difficulte">Ajouter une difficulte</button>
+            <div class="dropdown">
+            
+                
+                
+            </div>
+            <div class="hidden md:block mx-auto text-slate-500">Showing 1 to 10 of 150 entries</div>
+            <div class="w-full sm:w-auto mt-3 sm:mt-0 sm:ml-auto md:ml-0">
                 <div class="w-56 relative text-slate-500">
                     <input type="text" class="form-control w-56 box pr-10" placeholder="Search...">
                     <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-lucide="search"></i>
                 </div>
-                
             </div>
         </div>
         <!-- BEGIN: Data List -->
-        <div class="intro-y col-span-12 overflow-auto 2xl:overflow-visible">
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
-                        
                         <th class="whitespace-nowrap">id</th>
                         <th class="text-center whitespace-nowrap">Description</th>
+                        <th class="text-center whitespace-nowrap">Status</th>
+                        <th class="text-center whitespace-nowrap">Source</th>
                         <th class="text-center whitespace-nowrap">Date</th>
-                        <th class="text-center whitespace-nowrap">ACTIONS</th>
+                        <th class="text-center whitespace-nowrap">ACTIONS</th> 
                     </tr>
                 </thead>
                 <tbody>
                     <!-- @foreach (array_slice($fakers, 0, 9) as $faker)-->
                         <tr class="intro-x">
-                            <td  class="text-center capitalize">
-                                
-                            </td>
-                            <td class="text-center">
-                                
-                            </td>
-                            <td class="!py-3.5" ></td>
+                            <td class="w-40"></td>
+                            <td class="text-center"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>
+                            <td class="w-40"></td>   
+                            
                             <td class="table-report__action w-56">
+                            
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;">
+                                    <a class="flex items-center " href="javascript:;">
                                         <i data-lucide="check-square" class="w-4 h-4 mr-1"></i> Edit
                                     </a>
-                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal">
+                                    <a class="flex items-center text-danger" href="javascript:;" data-tw-toggle="modal" data-tw-target="#delete-confirmation-modal-difficulte">
                                         <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
                                     </a>
                                 </div>
                             </td>
                         </tr>
-                   <!--  @endforeach-->
+                   <!-- @endforeach-->
                 </tbody>
             </table>
         </div>
@@ -828,8 +908,37 @@
         </div>
         <!-- END: Pagination -->
     </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-difficulte" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">difficultés</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
     <!-- BEGIN: Delete Confirmation Modal -->
-    <div id="delete-confirmation-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div id="delete-confirmation-modal-difficulte" class="modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body p-0">
@@ -847,5 +956,5 @@
         </div>
     </div>
     <!-- END: Delete Confirmation Modal -->
-  <!--end difficultes -->
+     <!-- END: Difficultes-->
 @endsection
