@@ -1,284 +1,235 @@
 @extends('../layout/' . $layout)
 
 @section('subhead')
-    <title>formulaire d'enregistremnte des projets</title>
+    <title> Formulaire d'enregistrement projet </title>
 @endsection
 
 @section('subcontent')
-<div class="intro-y flex items-center mt-8">
-    <h2 class="text-lg font-medium mr-auto"> Projets Form</h2>
-</div>
-<div class="grid grid-cols-12 gap-6 mt-5">
-    <!-- Bloc gauche -->
-    <div class="intro-y col-span-12 lg:col-span-6">
-        <!-- BEGIN: Form Validation -->
-        <div class="intro-y box">
-            <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                <h2 class="font-medium text-base mr-auto">Informations personnelles</h2>
-            </div>
-            <div class="p-5">
-                <!-- Commencez à ajouter des champs de formulaire pour le bloc gauche ici -->
-                <form class="validate-form">
-                <div class="input-form">
-                                                <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 2 characters</span>
-                                                </label>
-                                                <input id="validation-form-1" type="text" name="name" class="form-control" placeholder="John Legend" minlength="2" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Email <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, email address format</span>
-                                                </label>
-                                                <input id="validation-form-2" type="email" name="email" class="form-control" placeholder="example@gmail.com" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-3" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Password <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 6 characters</span>
-                                                </label>
-                                                <input id="validation-form-3" type="password" name="password" class="form-control" placeholder="secret" minlength="6" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-4" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Age <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, integer only & maximum 3 characters</span>
-                                                </label>
-                                                <input id="validation-form-4" type="number" name="age" class="form-control" placeholder="21" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-5" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Profile URL <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Optional, URL format</span>
-                                                </label>
-                                                <input id="validation-form-5" type="url" name="url" class="form-control" placeholder="https://google.com">
-                                            </div>
-                                            <div id="radio" class="p-5">
-                    <div class="preview">
-                        <div>
-                            <label>Vertical Radio Button</label>
-                            <div class="form-check mt-2">
-                                <input id="radio-switch-1" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-chris-evans">
-                                <label class="form-check-label" for="radio-switch-1">Chris Evans</label>
+    <div class="intro-y flex items-center mt-8">
+        <h2 class="text-lg font-medium mr-auto">Add Product</h2>
+    </div>
+    <div class="grid grid-cols-11 gap-x-6 mt-5 pb-20">
+        
+        <div class="intro-y col-span-11 2xl:col-span-9">
+            <!-- BEGIN: Product Detail -->
+            <div class="intro-y box p-5 mt-5">
+                <form action="" method="POST">
+                    @csrf
+                    <div class="border border-slate-200/60 dark:border-darkmode-400 rounded-md p-5">
+                        <div class="font-medium text-base flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5">
+                            <i data-lucide="chevron-down" class="w-4 h-4 mr-2"></i> Product Detail
+                        </div>
+                        <div class="mt-5">
+                            <!-- Product Name -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Product Name</div>
+                                            <div class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">Required</div>
+                                        </div>
+                                        <div class="leading-relaxed text-slate-500 text-xs mt-3">
+                                            Include min. 40 characters to make it more attractive and easy for buyers to find, consisting of product type, brand, and information such as color, material, or type.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <input id="product-name" name="product_name" type="text" class="form-control" placeholder="Product name" required>
+                                    <div class="form-help text-right">Maximum character 0/70</div>
+                                </div>
                             </div>
-                            <div class="form-check mt-2">
-                                <input id="radio-switch-2" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-liam-neeson">
-                                <label class="form-check-label" for="radio-switch-2">Liam Neeson</label>
+
+                            <!-- Structure porteur -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Structure porteur</div>
+                                            <button class="btn btn-primary w-44" data-tw-toggle="modal" data-tw-target="#new-order-modal-structure-porteur">
+                                    <i data-lucide="plus" class="w-4 h-4 mr-2"></i> Ajouter 
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <select name="structure" id="structure" class="form-select">
+                                        @foreach (array_slice($fakers, 0, 9) as $faker)
+                                            <option value="{{ $faker['categories'][0]['name'] }}">{{ $faker['categories'][0]['name'] }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-check mt-2">
-                                <input id="radio-switch-3" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-daniel-craig">
-                                <label class="form-check-label" for="radio-switch-3">Daniel Craig</label>
+
+                            <!-- Equipe -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Equipe</div>
+                                            <button class="btn btn-primary w-44" data-tw-toggle="modal" data-tw-target="#new-order-modal-equipe">
+                                    <i data-lucide="plus" class="w-4 h-4 mr-2"></i> Ajouter 
+                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <select name="equipe" id="equipe" class="form-select">
+                                        @foreach (array_slice($fakers, 0, 9) as $faker)
+                                            <option value="{{ $faker['categories'][0]['name'] }}">{{ $faker['categories'][0]['name'] }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Condition -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Condition</div>
+                                            <div class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">Required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <div class="flex flex-col sm:flex-row">
+                                        <div class="form-check mr-4">
+                                            <input id="condition-new" name="condition" class="form-check-input" type="radio" value="new" required>
+                                            <label class="form-check-label" for="condition-new">New</label>
+                                        </div>
+                                        <div class="form-check mr-4 mt-2 sm:mt-0">
+                                            <input id="condition-second" name="condition" class="form-check-input" type="radio" value="second">
+                                            <label class="form-check-label" for="condition-second">Second</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Description -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Product Description</div>
+                                            <div class="ml-2 px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">Required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <textarea name="product_description" class="form-control" rows="5" required></textarea>
+                                    <div class="form-help text-right">Maximum character 0/2000</div>
+                                </div>
+                            </div>
+
+                            <!-- Product Video -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="flex items-center">
+                                            <div class="font-medium">Product Video</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <input type="file" name="product_video" class="form-control">
+                                </div>
+                            </div>
+
+                            <!-- Date -->
+                            <div class="form-inline items-start flex-col xl:flex-row mt-5 pt-5 first:mt-0 first:pt-0">
+                                <div class="form-label xl:w-64 xl:!mr-10">
+                                    <div class="text-left">
+                                        <div class="font-medium">Product Date</div>
+                                    </div>
+                                </div>
+                                <div class="w-full mt-3 xl:mt-0 flex-1">
+                                    <input type="date" name="product_date" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-3">
-                            <label>Horizontal Radio Button</label>
-                            <div class="flex flex-col sm:flex-row mt-2">
-                                <div class="form-check mr-2">
-                                    <input id="radio-switch-4" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-chris-evans">
-                                    <label class="form-check-label" for="radio-switch-4">Chris Evans</label>
-                                </div>
-                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                    <input id="radio-switch-5" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-liam-neeson">
-                                    <label class="form-check-label" for="radio-switch-5">Liam Neeson</label>
-                                </div>
-                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                    <input id="radio-switch-6" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-daniel-craig">
-                                    <label class="form-check-label" for="radio-switch-6">Daniel Craig</label>
-                                </div>
-                            </div>
+
+                        <!-- Form Actions -->
+                        <div class="flex justify-end flex-col md:flex-row gap-2 mt-5">
+                            <button type="button" class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">Cancel</button>
+                            <button type="submit" class="btn py-3 border-slate-300 dark:border-darkmode-400 text-slate-500 w-full md:w-52">Save & Add New Product</button>
+                            <button type="submit" class="btn py-3 btn-primary w-full md:w-52">Save</button>
                         </div>
                     </div>
-                    <div class="source-code hidden">
-                        <button data-target="#copy-radio" class="copy-code btn py-1 px-2 btn-outline-secondary">
-                            <i data-lucide="file" class="w-4 h-4 mr-2"></i> Copy example code
-                        </button>
-                        <div class="overflow-y-auto mt-3 rounded-md">
-                            <pre id="copy-radio" class="source-preview">
-                                <code class="html">
-                                    {{ str_replace('>', 'HTMLCloseTag', str_replace('<', 'HTMLOpenTag', '
-                                        <div>
-                                            <label>Vertical Radio Button</label>
-                                            <div class="form-check mt-2">
-                                                <input id="radio-switch-1" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-chris-evans">
-                                                <label class="form-check-label" for="radio-switch-1">Chris Evans</label>
-                                            </div>
-                                            <div class="form-check mt-2">
-                                                <input id="radio-switch-2" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-liam-neeson">
-                                                <label class="form-check-label" for="radio-switch-2">Liam Neeson</label>
-                                            </div>
-                                            <div class="form-check mt-2">
-                                                <input id="radio-switch-3" class="form-check-input" type="radio" name="vertical_radio_button" value="vertical-radio-daniel-craig">
-                                                <label class="form-check-label" for="radio-switch-3">Daniel Craig</label>
-                                            </div>
-                                        </div>
-                                        <div class="mt-3">
-                                            <label>Horizontal Radio Button</label>
-                                            <div class="flex flex-col sm:flex-row mt-2">
-                                                <div class="form-check mr-2">
-                                                    <input id="radio-switch-4" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-chris-evans">
-                                                    <label class="form-check-label" for="radio-switch-4">Chris Evans</label>
-                                                </div>
-                                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                                    <input id="radio-switch-5" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-liam-neeson">
-                                                    <label class="form-check-label" for="radio-switch-5">Liam Neeson</label>
-                                                </div>
-                                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                                    <input id="radio-switch-6" class="form-check-input" type="radio" name="horizontal_radio_button" value="horizontal-radio-daniel-craig">
-                                                    <label class="form-check-label" for="radio-switch-6">Daniel Craig</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ')) }}
-                                </code>
-                            </pre>
-                        </div>
-                    </div>
-                </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-6" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Comment <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 10 characters</span>
-                                                </label>
-                                                <textarea id="validation-form-6" class="form-control" name="comment" placeholder="Type your comments" minlength="10" required></textarea>
-                                            </div>
                 </form>
             </div>
+            <!-- END: Product Detail -->
         </div>
-        <!-- END: Form Validation -->
     </div>
 
-    <!-- Bloc droit -->
-    <div class="intro-y col-span-12 lg:col-span-6">
-        <!-- BEGIN: Form Validation -->
-        <div class="intro-y box">
-            <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                <h2 class="font-medium text-base mr-auto">Informations supplémentaires</h2>
-            </div>
-            <div class="p-5">
-                <!-- Commencez à ajouter des champs de formulaire pour le bloc droit ici -->
-                <form class="validate-form">
-                    <div class="input-form">
-                                                <label for="validation-form-1" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Name <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 2 characters</span>
-                                                </label>
-                                                <input id="validation-form-1" type="text" name="name" class="form-control" placeholder="John Legend" minlength="2" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-2" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Email <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, email address format</span>
-                                                </label>
-                                                <input id="validation-form-2" type="email" name="email" class="form-control" placeholder="example@gmail.com" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-3" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Password <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 6 characters</span>
-                                                </label>
-                                                <input id="validation-form-3" type="password" name="password" class="form-control" placeholder="secret" minlength="6" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-4" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Age <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, integer only & maximum 3 characters</span>
-                                                </label>
-                                                <input id="validation-form-4" type="number" name="age" class="form-control" placeholder="21" required>
-                                            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-5" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Profile URL <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Optional, URL format</span>
-                                                </label>
-                                                <input id="validation-form-5" type="url" name="url" class="form-control" placeholder="https://google.com">
-                                            </div>
+    <!-- BEGIN: Structure_porteur-->
 
-                                            <div class="mt-3">
-                            <label>Horizontal Checkbox</label>
-                            <div class="flex flex-col sm:flex-row mt-2">
-                                <div class="form-check mr-2">
-                                    <input id="checkbox-switch-4" class="form-check-input" type="checkbox" value="">
-                                    <label class="form-check-label" for="checkbox-switch-4">Chris Evans</label>
-                                </div>
-                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                    <input id="checkbox-switch-5" class="form-check-input" type="checkbox" value="">
-                                    <label class="form-check-label" for="checkbox-switch-5">Liam Neeson</label>
-                                </div>
-                                <div class="form-check mr-2 mt-2 sm:mt-0">
-                                    <input id="checkbox-switch-6" class="form-check-input" type="checkbox" value="">
-                                    <label class="form-check-label" for="checkbox-switch-6">Daniel Craig</label>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="intro-y box mt-5">
-                <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
-                    <h2 class="font-medium text-base mr-auto">Select Options</h2>
-                    <div class="form-check form-switch w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0">
-                        <label class="form-check-label ml-0" for="show-example-5">Show example code</label>
-                        <input id="show-example-5" data-target="#select-options" class="show-code form-check-input mr-0 ml-3" type="checkbox">
-                    </div>
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-structure-porteur" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">Structure porteur</h2>
                 </div>
-                <div id="select-options" class="p-5">
-                    <div class="preview">
-                        <div class="flex flex-col sm:flex-row items-center">
-                            <select class="form-select form-select-lg sm:mt-2 sm:mr-2" aria-label=".form-select-lg example">
-                                <option>Chris Evans</option>
-                                <option>Liam Neeson</option>
-                                <option>Daniel Craig</option>
-                            </select>
-                            <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
-                                <option>Chris Evans</option>
-                                <option>Liam Neeson</option>
-                                <option>Daniel Craig</option>
-                            </select>
-                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                <option>Chris Evans</option>
-                                <option>Liam Neeson</option>
-                                <option>Daniel Craig</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="source-code hidden">
-                        <button data-target="#copy-select-options" class="copy-code btn py-1 px-2 btn-outline-secondary">
-                            <i data-lucide="file" class="w-4 h-4 mr-2"></i> Copy example code
-                        </button>
-                        <div class="overflow-y-auto mt-3 rounded-md">
-                            <pre id="copy-select-options" class="source-preview">
-                                <code class="html">
-                                    {{ str_replace('>', 'HTMLCloseTag', str_replace('<', 'HTMLOpenTag', '
-                                        <div class="flex flex-col sm:flex-row items-center">
-                                            <select class="form-select form-select-lg sm:mt-2 sm:mr-2" aria-label=".form-select-lg example">
-                                                <option>Chris Evans</option>
-                                                <option>Liam Neeson</option>
-                                                <option>Daniel Craig</option>
-                                            </select>
-                                            <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
-                                                <option>Chris Evans</option>
-                                                <option>Liam Neeson</option>
-                                                <option>Daniel Craig</option>
-                                            </select>
-                                            <select class="form-select form-select-sm mt-2" aria-label=".form-select-sm example">
-                                                <option>Chris Evans</option>
-                                                <option>Liam Neeson</option>
-                                                <option>Daniel Craig</option>
-                                            </select>
-                                        </div>
-                                    ')) }}
-                                </code>
-                            </pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                                            <div class="input-form mt-3">
-                                                <label for="validation-form-6" class="form-label w-full flex flex-col sm:flex-row">
-                                                    Comment <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">Required, at least 10 characters</span>
-                                                </label>
-                                                <textarea id="validation-form-6" class="form-control" name="comment" placeholder="Type your comments" minlength="10" required></textarea>
-                                            </div>
-                </form>
+                <form id="myForm" action="" method="">
+    <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+        <div class="col-span-12">
+            <label for="pos-form-1" class="form-label">Nom</label>
+            <input id="pos-form-1" name="name" type="text" class="form-control flex-1" placeholder="Nom" required>
+        </div>
+        <div class="col-span-12">
+            <label for="pos-form-2" class="form-label">Adresse</label>
+            <input id="pos-form-2" name="address" type="text" class="form-control flex-1" placeholder="Adresse" required>
+        </div>
+        <div class="col-span-12">
+            <label for="pos-form-3" class="form-label">Date</label>
+            <input id="pos-form-3" name="date" type="date" class="form-control flex-1" required>
+        </div>
+    </div>
+    <div class="modal-footer text-right">
+        <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Annuler</button>
+        <button type="submit" class="btn btn-primary w-32">Enregistrer</button>
+    </div>
+</form>
+
             </div>
         </div>
-        <!-- END: Form Validation -->
     </div>
-</div>
+    <!-- END: New Order Modal -->
+     <!-- END: Structure_porteur-->
+    <!-- BEGIN: Equipe-->
+    <!-- BEGIN: New Order Modal -->
+    <div id="new-order-modal-equipe" class="modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="font-medium text-base mr-auto">Equipe</h2>
+                </div>
+                <div class="modal-body grid grid-cols-12 gap-4 gap-y-3">
+                    <div class="col-span-12">
+                        <label for="pos-form-1" class="form-label">Name</label>
+                        <input id="pos-form-1" type="text" class="form-control flex-1" placeholder="Customer name">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-2" class="form-label">Table</label>
+                        <input id="pos-form-2" type="text" class="form-control flex-1" placeholder="Customer table">
+                    </div>
+                    <div class="col-span-12">
+                        <label for="pos-form-3" class="form-label">Number of People</label>
+                        <input id="pos-form-3" type="text" class="form-control flex-1" placeholder="People">
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <button type="button" data-tw-dismiss="modal" class="btn btn-outline-secondary w-32 mr-1">Cancel</button>
+                    <button type="button" class="btn btn-primary w-32">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END: New Order Modal -->
+     <!-- END: Equipe-->
+      
+@endsection
 
-<!-- Bouton d'enregistrement en bas -->
-<div class="mt-5">
-    <button type="submit" class="btn btn-primary">Enregistrer</button>
-</div>
-
-
+@section('script')
+    <script src="{{ mix('dist/js/ckeditor-classic.js') }}"></script>
 @endsection
