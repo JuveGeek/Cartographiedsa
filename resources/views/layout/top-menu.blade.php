@@ -34,7 +34,7 @@
                 <a class="notification notification--light sm:hidden" href="">
                     <i data-lucide="search" class="notification__icon dark:text-slate-500"></i>
                 </a>
-                
+
             </div>
             <!-- END: Search -->
             <!-- BEGIN: Notifications -->

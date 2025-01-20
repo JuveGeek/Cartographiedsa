@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\DarkModeController;
 use App\Http\Controllers\ColorSchemeController;
 
@@ -104,6 +105,7 @@ Route::middleware('auth')->group(function() {
         Route::get('slider-page', 'slider')->name('slider');
         Route::get('image-zoom-page', 'imageZoom')->name('image-zoom');
     // Ajoute les autres routes ici selon le besoin
+        Route::post('/admin/users', [UserController::class, 'store'])->name('users.store');
     });
 });
 

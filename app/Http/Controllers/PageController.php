@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class PageController extends Controller
 {
@@ -23,7 +24,7 @@ class PageController extends Controller
         ]);
     }
 
-    /**
+   /**
      * Show specified view.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -251,7 +252,9 @@ class PageController extends Controller
      */
     public function usersLayoutMembre()
     {
-        return view('pages/users-layout-membre');
+        $users = User::paginate(10); // Récupérer les utilisateurs et les paginer par 10
+        return view('pages/users-layout-membre', compact('users'));
+
     }
 
     /**

@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;
     use HasApiTokens;
+    use HasRoles;
     /**
      * The attributes that are mass assignable.
      *
@@ -22,7 +24,9 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];*/
 
-    protected $fillable = ['nom', 'prenom', 'fonction', 'tel', 'email', 'date'];
+    //protected $fillable = ['name', 'prenom', 'fonction', 'tel', 'email', 'date'];
+
+    protected $fillable = ['name', 'firstname', 'tel', 'email', 'password'];
 
     public function structurePorteuse()
     {
